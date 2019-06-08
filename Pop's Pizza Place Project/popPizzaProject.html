@@ -22,67 +22,70 @@
                 <h1>...but here's a reminder just in case you grew up under a rock!</h1>
                 <p>Build your pizza from the options below. First meat and veggie is on us, but any more than that and it'll cose you!</p><br>
                 <p>$1 per topping over one complimentary meat and one complimentary veggie</p>
+                <input class="btnOrder" type="button" onclick="getReceipt()" 
+				value="Place Order">
                 <form >
                     <H1>SIZE</H1>
                     <!-- radio BUTTONS FOR THE SIZE OF THE PIZZA-->
-                    <fieldset id="size">
-                        <input type="radio" name="size" id="size" value="Personal Pizza">Personal Pizza<br>
-                        <input type="radio" name="size" id="size" value="Personal Pizza">Medium<br>
-                        <input type="radio" name="size" id="size" value="Large">Large and in Charge<br>
-                        <input type="radio" name="size" id="size" value="Xtra Large">Grandpappy of 'em All<br>
+                    <fieldset class="size">
+                        <input type="radio" name="size" class="size" value="Personal">Personal Pizza<br>
+                        <input type="radio" name="size" class="size" value="Medium">Medium<br>
+                        <input type="radio" name="size" class="size" value="Large">Large and in Charge<br>
+                        <input type="radio" name="size" class="size" value="Extra Large">Grandpappy of 'em All<br>
                     </fieldset>
 
                     <H1>MEAT</H1>
                     <!-- radio BUTTONS FOR THE MEATS -->
                     <!-- if you give them different names it allows you to use the radio button and click more than one, can't unclick it though if you change your mind:(-->
-                    <fieldset id="meats">
-                        <input type="checkbox" name="meat" id="size" value="Pepperoni">Pepperoni<br>
-                        <input type="checkbox" name="meat" id="size" value="Sausage">Sausage<br>
-                        <input type="checkbox" name="meat" id="size" value="Canadian Bacon">Canadian Bacon<br>
-                        <input type="checkbox" name="meat" id="size" value="Ground Beef">Ground Beef<br>
-                        <input type="checkbox" name="meat" id="size" value="Anchovy">Anchovy<br>
-                        <input type="checkbox" name="meat" id="size" value="Chicken">Chicken<br>
+                    <fieldset class="meats">
+                        <input type="checkbox" name="meat" class="meat" value="Pepperoni">Pepperoni<br>
+                        <input type="checkbox" name="meat" class="meat" value="Sausage">Sausage<br>
+                        <input type="checkbox" name="meat" class="meat" value="Canadian Bacon">Canadian Bacon<br>
+                        <input type="checkbox" name="meat" class="meat" value="Ground Beef">Ground Beef<br>
+                        <input type="checkbox" name="meat" class="meat" value="Anchovy">Anchovy<br>
+                        <input type="checkbox" name="meat" class="meat" value="Chicken">Chicken<br>
                     </fieldset>
 
                     <H1>CHEESE</H1>
                     <!-- radio BUTTONS FOR THE CHEESE -->
-                    <fieldset id="cheese">
-                        <input type="radio" name="cheese" id="size" value="no cheese">No cheese<br>
-                        <input type="radio" name="cheese" id="size" value="Cheese">Regular<br>
-                        <input type="radio" name="cheese" id="size" value="Extra cheese">Extra Cheese<br>
+                    <fieldset class="cheese">
+                        <input type="radio" name="cheese" class="cheese" value="no cheese">No cheese<br>
+                        <input type="radio" name="cheese" class="cheese" value="Cheese">Regular<br>
+                        <input type="radio" name="cheese" class="cheese" value="Extra cheese">Extra Cheese<br>
                     </fieldset>
 
 
                     <H1>CRUST</H1>
                     <!-- radio BUTTONS FOR THE CRUST -->
-                    <fieldset id="crust">
-                        <input type="radio" name="crust" id="crust" value="plain">Plain<br>
-                        <input type="radio" name="crust" id="crust" value="garlic butter">Garlic Butter<br>
-                        <input type="radio" name="crust" id="crust" value="spicy">Spicy<br>
-                        <input type="radio" name="crust" id="crust" value="house special">House Special<br>
+                    <fieldset class="crust">
+                        <input type="radio" name="crust" class="crust" value="plain">Plain<br>
+                        <input type="radio" name="crust" class="crust" value="garlic butter">Garlic Butter<br>
+                        <input type="radio" name="crust" class="crust" value="spicy">Spicy<br>
+                        <input type="radio" name="crust" class="crust" value="house special">House Special<br>
+                        <input type="radio" name="crust" class="crust" value="Cheese-filled">Cheese-filled<br>
 
                     </fieldset>
 
                     <H1>SAUCE</H1>
                     <!-- radio BUTTONS FOR THE SAUCE -->
                     <fieldset>
-                        <input type="radio" name="sauce" id="sauce" value="Marinara">Marinara<br>
-                        <input type="radio" name="sauce" id="sauce" value="White">White <br>
-                        <input type="radio" name="sauce" id="sauce" value="BBQ">BBQ <br>
-                        <input type="radio" name="sauce" id="sauce" value="no sauce">No Sauce <br>
+                        <input type="radio" name="sauce" class="sauce" value="Marinara">Marinara<br>
+                        <input type="radio" name="sauce" class="sauce" value="White">White <br>
+                        <input type="radio" name="sauce" class="sauce" value="BBQ">BBQ <br>
+                        <input type="radio" name="sauce" class="sauce" value="no sauce">No Sauce <br>
                     </fieldset>
 
                     <H1>VEGGIES</H1>
                     <!-- radio BUTTONS FOR THE VEGGIES -->
                     <fieldset>
-                        <input type="checkbox" name="veggies" id="veggies" value="tomatoes">Tomatoes <br>
-                        <input type="checkbox" name="veggies" id="veggies" value="Onions">Onions <br>
-                        <input type="checkbox" name="veggies" id="veggies" value="Olives">Olives <br>
-                        <input type="checkbox" name="veggies" id="veggies" value="Green Peppers">Green Peppers <br>
-                        <input type="checkbox" name="veggies" id="veggies" value="Mushrooms">Mushrooms <br>
-                        <input type="checkbox" name="veggies" id="veggies" value="Pineapple">Pineapple <br>
-                        <input type="checkbox" name="veggies" id="veggies" value="Spinach">Spinach <br>
-                        <input type="checkbox" name="veggies" id="veggies" value="Jalepeno">Jalepeno <br>
+                        <input type="checkbox" name="veggies" class="veggies" value="tomatoes">Tomatoes <br>
+                        <input type="checkbox" name="veggies" class="veggies" value="Onions">Onions <br>
+                        <input type="checkbox" name="veggies" class="veggies" value="Olives">Olives <br>
+                        <input type="checkbox" name="veggies" class="veggies" value="Green Peppers">Green Peppers <br>
+                        <input type="checkbox" name="veggies" class="veggies" value="Mushrooms">Mushrooms <br>
+                        <input type="checkbox" name="veggies" class="veggies" value="Pineapple">Pineapple <br>
+                        <input type="checkbox" name="veggies" class="veggies" value="Spinach">Spinach <br>
+                        <input type="checkbox" name="veggies" class="veggies" value="Jalepeno">Jalepeno <br>
                     </fieldset>
 
 
@@ -90,6 +93,13 @@
 
 
                 </form>
+                <input class="btnOrder" type="button" onclick="getReceipt()" 
+				value="Place Order">
+                <div class="cart">
+                    <div class="showText"></div>
+                    <div class="totalPrice"></div>
+
+                </div>
 
             
             </section>
@@ -98,18 +108,6 @@
         </main>
 
 
-        <!-- radio BUTTONS FOR SIZE OF THE PIZZA-->
-
-
-        <!-- radio BUTTONS FOR MEAT SELECTION OF THE PIZZA-->
-
-        <!-- radio BUTTONS FOR CHEESE OF THE PIZZA-->
-
-        <!-- radio BUTTONS FOR CRUST OF THE PIZZA-->
-
-        <!-- radio BUTTONS FOR SAUCE OF THE PIZZA-->
-
-        <!-- radio BUTTONS FOR VEGGIE TOPPINGS OF THE PIZZA-->
 
 
 
@@ -120,6 +118,6 @@
 
 
 
-        <!--script src="popJava.js"></script-->
+        <script src="./js/popJava.js"></script>
     </body>
 </html>
