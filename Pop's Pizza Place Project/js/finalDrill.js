@@ -114,6 +114,7 @@ function getOrder(runningTotal,text1) {
     } else {
         veggieTotal = 0;
     }
+    "<br><br>"
 
 
 
