@@ -95,12 +95,35 @@ function getOrder(runningTotal,text1) {
         }
     }
 
+    //======================================== ADD VEGGIE SELECTION ========================
 
-	runningTotal = (runningTotal + meatTotal + cheeseTotal + crustTotal);
+    var veggieTotal = 0;
+    var selectedVeggie = [];
+    var veggieArray = document.getElementsByClassName("veggie");
+    for (var v = 0; v < veggieArray.length; v++) {
+        if (veggieArray[v].checked){
+            selectedVeggie.push(veggieArray[v].value);
+            console.log("veggie: "+veggieArray[v].value);
+            text1=text1+veggieArray[v].value+"<br>";
+        }
+    }
+
+    var veggieCount = selectedVeggie.length;
+    if (veggieCount > 1) {
+        veggieTotal = (veggieCount - 1);
+    } else {
+        veggieTotal = 0;
+    }
+
+
+
+	runningTotal = (runningTotal + meatTotal + cheeseTotal + crustTotal + veggieTotal);
 	console.log("total selected meat items: "+meatCount);
 	console.log(meatCount+" meat - 1 free meat = "+"$"+meatTotal+".00");
     console.log("meat text1: "+text1);
     console.log('cheese selected: '+selectedCheese);
+    console.log('sauce: '+selectedSauce);
+    console.log("veggies: "+text1);
     console.log("Purchase Total: "+"$"+runningTotal+".00");
 	document.getElementById("showText").innerHTML=text1;
 	document.getElementById("totalPrice").innerHTML = "</h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
