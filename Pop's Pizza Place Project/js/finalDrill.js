@@ -1,3 +1,5 @@
+userOrder = [];
+
 function getReceipt() {
 	// This initializes our string so it can get passed from  
 	// function to function, growing line by line into a full receipt
@@ -8,7 +10,8 @@ function getReceipt() {
 	for (var i = 0; i < sizeArray.length; i++) {
 		if (sizeArray[i].checked) {
 			var selectedSize = sizeArray[i].value;
-			text1 = text1+selectedSize+"<br>";
+            text1 = text1+selectedSize+"<br>";
+            
 		}
 	}
 	if (selectedSize === "Personal Pizza") {
@@ -19,7 +22,12 @@ function getReceipt() {
 		sizeTotal = 14;
 	} else if (selectedSize === "Extra Large Pizza") {
 		sizeTotal = 16;
-	}
+    }
+    
+    userOrder.push([selectedSize, sizeTotal]);
+    console.log(userOrder);
+
+    
 	runningTotal = sizeTotal;
 	console.log(selectedSize+" = $"+sizeTotal+".00");
 	console.log("size text1: "+text1);
@@ -114,7 +122,7 @@ function getOrder(runningTotal,text1) {
     } else {
         veggieTotal = 0;
     }
-    "<br><br>"
+    
 
 
 
