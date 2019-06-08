@@ -24,14 +24,14 @@ function getReceipt() {
 		sizeTotal = 16;
     }
     
-    userOrder.push([selectedSize, sizeTotal]);
-    console.log(userOrder);
+    
 
     
 	runningTotal = sizeTotal;
 	console.log(selectedSize+" = $"+sizeTotal+".00");
 	console.log("size text1: "+text1);
-	console.log("subtotal: $"+runningTotal+".00");
+    console.log("subtotal: $"+runningTotal+".00");
+    //document.getElementById("pizzaSize").innerHTML=selectedSize;
     getOrder(runningTotal,text1);
     //getCheese(runningTotal,text1); // All three of these variables will be passed on to each function
 };

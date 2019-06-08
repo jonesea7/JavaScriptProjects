@@ -61,10 +61,22 @@
                 </div><br><br>
 				
             </form>
-                <div id="cart">
-                    <div id="showText"></div>
-                    <div id="totalPrice"></div>
-                </div>
+
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Item</th>                    
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"></th>
+                    <td id="showText"></td>
+                    <td colspan="2" id="totalPrice"></td>
+                  </tr>
+                  
         <input id="btnOrder" type="button" onclick="getReceipt()" 
 				value="Place Order">
 		</div>
