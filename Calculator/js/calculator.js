@@ -41,8 +41,8 @@ function useOperator(nextOperator) {
         const currentValue = operand1 || 0;
         let result = performCalculation[operator](currentValue, parsedInputValue);
         result = Number(result).toFixed(9); //fixes the amount of zeros after decimal
-        result = (result*1).toString();
-        Calculator.calcScreenValue = (result);
+        result = (result*1);
+        Calculator.calcScreenValue = String(result);
         Calculator.operand1 = result;
     }
     Calculator.readyOperand2 = true;
